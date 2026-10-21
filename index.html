@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>讀到這裡 — 把讀到的那一頁留下來</title>
+    <meta name="description" content="讀到這裡是一本留在手機上的讀書筆記。把正在看的書放到書架，記下讀到第幾頁、當下的心情，和一句話。日曆會標出有讀書的日子。筆記只存在這台手機，沒有帳號。" />
+    <link rel="canonical" href="https://read.dreamdiary.workers.dev/" />
+    <meta name="theme-color" content="#16191e" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="讀到這裡" />
+    <meta property="og:title" content="讀到這裡 — 把讀到的那一頁留下來" />
+    <meta property="og:description" content="一本留在手機上的讀書筆記。記下讀到第幾頁、當下的心情，和一句話。" />
+    <meta property="og:url" content="https://read.dreamdiary.workers.dev/" />
+    <meta property="og:image" content="https://read.dreamdiary.workers.dev/icon.png" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/icon.png" />
+    <link rel="apple-touch-icon" href="/icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">跳到主要內容</a>
+
+    <header class="site-header">
+      <div class="header-in">
+        <a class="brand" href="/" aria-label="讀到這裡 — 首頁">
+          <img src="/icon.png" width="34" height="34" alt="" />
+          <span>讀到這裡</span>
+        </a>
+        <nav class="site-nav" aria-label="網站導覽">
+          <a href="#features">功能</a>
+          <a href="#rooms">書房</a>
+          <a href="#how">怎麼用</a>
+          <a href="#faq">常見問題</a>
+          <a href="/privacy/">隱私權</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">一本留在手機上的讀書筆記</p>
+          <h1>讀到這裡</h1>
+          <p class="lead">把讀到的那一頁留下來。</p>
+          <p class="hero-text">
+            讀完一段，把書放上書架，記下讀到第幾頁、當下的心情，和一句想留下的話。
+            日子久了，日曆上會留下一串有讀書的日子——那是你自己的閱讀軌跡。
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#features">看看它能做什麼</a>
+            <a class="btn btn-ghost" href="/privacy/">先看隱私權說明</a>
+          </div>
+          <ul class="hero-notes">
+            <li>沒有帳號</li>
+            <li>筆記不上傳</li>
+            <li>只存在這台手機</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="phone" id="phone" data-theme="midnight" role="img"
+               aria-label="讀到這裡 App 畫面示意：書架上的一本書，讀到第 128 頁，共 320 頁，心情是平靜，留下一句話；下方日曆標出有讀書的日子。">
+            <div class="phone-bar"><span class="phone-dot"></span><span class="phone-title">我的書架</span><span class="phone-moon" aria-hidden="true">☾</span></div>
+            <div class="phone-book">
+              <p class="phone-book-cat">小說</p>
+              <p class="phone-book-name">《夜晚的散步》</p>
+              <div class="phone-progress"><span style="width:40%"></span></div>
+              <p class="phone-page">讀到第 <strong>128</strong> 頁 · 共 320 頁</p>
+            </div>
+            <div class="phone-note">
+              <p class="phone-note-row"><span class="phone-chip">心情 · 平靜</span><span class="phone-date">10 月 21 日</span></p>
+              <p class="phone-sentence">「今天這一段，想慢慢讀。」</p>
+            </div>
+            <div class="phone-cal" aria-hidden="true">
+              <p class="phone-cal-title">10 月</p>
+              <div class="phone-cal-grid">
+                <span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span>
+                <span class="d">1</span><span class="d read">2</span><span class="d">3</span><span class="d read">4</span><span class="d">5</span><span class="d">6</span><span class="d">7</span>
+                <span class="d read">8</span><span class="d">9</span><span class="d read">10</span><span class="d">11</span><span class="d">12</span><span class="d read">13</span><span class="d">14</span>
+                <span class="d">15</span><span class="d read">16</span><span class="d">17</span><span class="d">18</span><span class="d read">19</span><span class="d">20</span><span class="d today">21</span>
+              </div>
+            </div>
+          </div>
+          <p class="mock-caption">畫面示意，內容為範例 — 點下方切換三間書房的配色</p>
+          <div class="room-switch" role="group" aria-label="預覽書房配色">
+            <button type="button" data-room="washi">日式和紙</button>
+            <button type="button" data-room="midnight" class="active" aria-pressed="true">午夜寂靜</button>
+            <button type="button" data-room="nordic">北歐晨曦</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="section" id="features">
+        <p class="section-eyebrow reveal">功能</p>
+        <h2 class="reveal">把讀書，留成一本自己的筆記</h2>
+        <p class="section-lead reveal">不複雜。一本書、一頁進度、一句話，記下來就好。</p>
+        <div class="cards">
+          <article class="card reveal">
+            <p class="card-icon" aria-hidden="true">▤</p>
+            <h3>書架</h3>
+            <p>把正在看的書放上書架：書名、總頁數、分類，一本一本排好，手邊在讀什麼一目了然。</p>
+          </article>
+          <article class="card reveal">
+            <p class="card-icon" aria-hidden="true">▦</p>
+            <h3>讀到第幾頁</h3>
+            <p>每次讀完，記下今天讀到第幾頁。進度自己會往前走，不用自己算百分比。</p>
+          </article>
+          <article class="card reveal">
+            <p class="card-icon" aria-hidden="true">✎</p>
+            <h3>心情與一句話</h3>
+            <p>除了頁數，還有當下的心情，和一句想留下的話。之後回來看，記得的不只是內容。</p>
+          </article>
+          <article class="card reveal">
+            <p class="card-icon" aria-hidden="true">▩</p>
+            <h3>閱讀日曆</h3>
+            <p>日曆會標出有讀書的日子。哪天讀了、讀得勤不勤，回頭看就知道自己的節奏。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Rooms -->
+      <section class="section" id="rooms">
+        <p class="section-eyebrow reveal">書房</p>
+        <h2 class="reveal">三間書房，三種光</h2>
+        <p class="section-lead reveal">同一本筆記，可以住在不同的光裡。選一間順眼的書房，讀書的心情也跟著安靜下來。</p>
+        <div class="rooms-grid">
+          <article class="room-card room-washi reveal">
+            <div class="room-preview"><span class="room-book"></span><span class="room-line"></span><span class="room-line short"></span></div>
+            <h3>日式和紙</h3>
+            <p>暖白的紙色，像攤開一本和紙筆記，適合白天慢慢讀。</p>
+          </article>
+          <article class="room-card room-midnight reveal">
+            <div class="room-preview"><span class="room-book"></span><span class="room-line"></span><span class="room-line short"></span></div>
+            <h3>午夜寂靜</h3>
+            <p>深夜的藍，留給睡前讀幾頁的人。光暗下來，字安靜下來。</p>
+          </article>
+          <article class="room-card room-nordic reveal">
+            <div class="room-preview"><span class="room-book"></span><span class="room-line"></span><span class="room-line short"></span></div>
+            <h3>北歐晨曦</h3>
+            <p>清晨的淺光，乾淨透亮，適合配一天的第一杯咖啡。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- How -->
+      <section class="section" id="how">
+        <p class="section-eyebrow reveal">怎麼用</p>
+        <h2 class="reveal">三步，留下一頁</h2>
+        <ol class="steps">
+          <li class="reveal">
+            <span class="step-no" aria-hidden="true">1</span>
+            <div>
+              <h3>放上書架</h3>
+              <p>新增一本正在讀的書，寫下書名、總頁數與分類。</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="step-no" aria-hidden="true">2</span>
+            <div>
+              <h3>讀完記一筆</h3>
+              <p>闔上書之前，記下今天讀到第幾頁、當下的心情，和一句話。</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="step-no" aria-hidden="true">3</span>
+            <div>
+              <h3>偶爾回頭看</h3>
+              <p>在日曆上看見有讀書的日子；想分享時，把一則筆記做成圖片或文字，傳給朋友。</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Privacy teaser -->
+      <section class="section privacy-teaser reveal" id="privacy">
+        <h2>你的筆記，只屬於你</h2>
+        <ul class="privacy-points">
+          <li><strong>沒有帳號</strong> — 不用登入，也沒有會員。</li>
+          <li><strong>不上傳</strong> — 書架與筆記只存在這台手機，開發者收不到。</li>
+          <li><strong>分享由你決定</strong> — 分享由你主動開啟，內容交給你選擇的 App 處理。</li>
+        </ul>
+        <a class="btn btn-ghost" href="/privacy/">讀完整的隱私權說明</a>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq">
+        <p class="section-eyebrow reveal">常見問題</p>
+        <h2 class="reveal">先說清楚的事</h2>
+        <div class="faq-list">
+          <details class="reveal">
+            <summary>需要註冊帳號嗎？</summary>
+            <p>不用。打開就能記，沒有登入，也沒有會員。</p>
+          </details>
+          <details class="reveal">
+            <summary>我的筆記會被上傳嗎？</summary>
+            <p>不會。書架與筆記都只存在你的手機裡，開發者收不到，App 也不會把它們上傳。</p>
+          </details>
+          <details class="reveal">
+            <summary>換手機，或刪掉 App，筆記還在嗎？</summary>
+            <p>筆記只留在原本那台手機。刪除 App，或清除 App 的資料，筆記會一起刪除；開發者端沒有另一份備份可以復原。</p>
+          </details>
+          <details class="reveal">
+            <summary>可以把筆記分享給朋友嗎？</summary>
+            <p>可以。分享由你主動開啟，App 會做出一張圖片，或一段文字，再交給手機的分享功能，由你選擇的 App 處理。</p>
+          </details>
+          <details class="reveal">
+            <summary>這個網站會收集我的資料嗎？</summary>
+            <p>不會。這個網站沒有表單，也不使用追蹤 Cookie，你的筆記不會送到這裡。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Support -->
+      <section class="section support reveal" id="support">
+        <h2>遇到問題，或想說一句話</h2>
+        <p>使用上遇到問題，或對讀到這裡有任何想法，歡迎來信。</p>
+        <p><a class="mail-link" href="mailto:a.pieceofcake.zip@gmail.com">a.pieceofcake.zip@gmail.com</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer-full">
+      <div class="footer-in">
+        <a class="brand" href="/">
+          <img src="/icon.png" width="28" height="28" alt="" />
+          <span>讀到這裡</span>
+        </a>
+        <nav class="footer-nav" aria-label="頁尾導覽">
+          <a href="#features">功能</a>
+          <a href="#rooms">書房</a>
+          <a href="#how">怎麼用</a>
+          <a href="#faq">常見問題</a>
+          <a href="/privacy/">隱私權</a>
+        </nav>
+        <p class="footer-note">© <span id="year">2026</span> 讀到這裡 · 筆記只存在你的手機裡</p>
+      </div>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

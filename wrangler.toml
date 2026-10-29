@@ -1,0 +1,14 @@
+name = "read"
+compatibility_date = "2026-05-01"
+main = "worker.js"
+
+[assets]
+directory = "."
+binding = "ASSETS"
+html_handling = "auto"
+not_found_handling = "404-page"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "readhere-apply"
+database_id = "6525b006-77fa-4529-be7f-f7b03bb4b3e1"

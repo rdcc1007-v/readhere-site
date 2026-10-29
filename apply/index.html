@@ -145,7 +145,7 @@
         var year = document.getElementById("year");
         if (year) year.textContent = String(new Date().getFullYear());
 
-        var FORM_ENDPOINT = "https://formsubmit.co/ajax/a.pieceofcake.zip@gmail.com";
+        var FORM_ENDPOINT = "/api/apply";
         var form = document.getElementById("android-form");
         var formErr = document.getElementById("form-err");
         var submitBtn = document.getElementById("android-submit");
@@ -183,8 +183,6 @@
               body: JSON.stringify({
                 姓名: name,
                 "Gmail 信箱": email,
-                _subject: "【讀到這裡】Android APP 申請",
-                _template: "table",
               }),
             });
             var data = {};
@@ -195,6 +193,9 @@
               formView.hidden = true;
               fallbackView.hidden = true;
               doneView.hidden = false;
+            } else if (data && data.error) {
+              formErr.textContent = data.error;
+              formErr.classList.add("show");
             } else {
               throw new Error("submit failed");
             }

@@ -10,6 +10,7 @@
 | 檔案 | 說明 |
 |---|---|
 | `index.html` | 首頁：Hero（手機示意圖＋三間書房配色切換）、功能、書房、使用步驟、隱私重點、FAQ、支援 |
+| `apply/index.html` | Android APP 申請表單（formsubmit.co）＋網頁版註冊連結 |
 | `privacy/index.html` | 隱私權說明（生效日期：2026-10-21） |
 | `styles.css` | 全站樣式（深色「午夜寂靜」基調；含隱私頁樣式） |
 | `app.js` | 書房配色切換、進場動畫、頁尾年份（無框架、無相依） |

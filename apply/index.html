@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>申請讀到這裡 — Android APP 與網頁版</title>
+    <meta
+      name="description"
+      content="申請讀到這裡的 Android 封閉測試，或前往網頁版註冊使用。留下姓名與 Gmail，我們會盡快與你聯絡。"
+    />
+    <link rel="canonical" href="https://read.dreamdiary.workers.dev/apply/" />
+    <meta name="theme-color" content="#16191e" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="讀到這裡" />
+    <meta property="og:title" content="申請讀到這裡 — Android APP 與網頁版" />
+    <meta
+      property="og:description"
+      content="申請 Android 封閉測試，或前往網頁版註冊使用。"
+    />
+    <meta property="og:url" content="https://read.dreamdiary.workers.dev/apply/" />
+    <meta property="og:image" content="https://read.dreamdiary.workers.dev/icon.png" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/icon.png" />
+    <link rel="apple-touch-icon" href="/icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="apply-page">
+    <a class="skip" href="#main">跳到主要內容</a>
+
+    <header class="site-header">
+      <div class="header-in">
+        <a class="brand" href="/" aria-label="讀到這裡 — 首頁">
+          <img src="/icon.png" width="34" height="34" alt="" />
+          <span>讀到這裡</span>
+        </a>
+        <nav class="site-nav" aria-label="網站導覽">
+          <a href="/#features">功能</a>
+          <a href="/#rooms">書房</a>
+          <a href="/privacy/">隱私權</a>
+          <a href="/apply/" aria-current="page">申請使用</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="apply-main">
+      <section class="apply-card" aria-labelledby="apply-title">
+        <div id="apply-form-view">
+          <div class="apply-ico" aria-hidden="true">
+            <img src="/icon.png" width="56" height="56" alt="" />
+          </div>
+          <h1 id="apply-title">Android APP申請</h1>
+          <p class="apply-sub">
+            謝謝你申請讀到這裡！留下你的 Gmail 信箱，<br />
+            我們會盡快與你聯絡、把你加入 Android 測試名單。<br />
+            名額有限，行動要快！
+          </p>
+
+          <form id="android-form" class="apply-form" novalidate>
+            <label class="apply-field">
+              <span>姓名</span>
+              <input
+                type="text"
+                id="f-name"
+                name="name"
+                placeholder="怎麼稱呼你"
+                autocomplete="name"
+              />
+            </label>
+            <label class="apply-field">
+              <span>Gmail 信箱</span>
+              <input
+                type="email"
+                id="f-email"
+                name="email"
+                placeholder="你的 Gmail 信箱"
+                autocomplete="email"
+              />
+            </label>
+            <p class="apply-err" id="form-err" role="alert"></p>
+            <button type="submit" class="btn btn-primary apply-submit" id="android-submit">
+              Android APP申請
+            </button>
+            <a class="btn btn-ghost apply-submit" href="https://readhere.pages.dev/">
+              網頁版註冊使用
+            </a>
+            <p class="apply-note">目前僅支援 Android · 名額有限</p>
+          </form>
+        </div>
+
+        <div id="apply-done" hidden>
+          <div class="apply-ico apply-ico-mark" aria-hidden="true">✓</div>
+          <h2>謝謝你的申請！</h2>
+          <p class="apply-sub">
+            我們會盡快與你聯絡、把你加入 Android 測試名單，請留意你的 Gmail 信箱。
+          </p>
+          <a class="btn btn-primary apply-submit" href="https://readhere.pages.dev/">
+            網頁版註冊使用
+          </a>
+          <a class="btn btn-ghost apply-submit" href="/">回首頁</a>
+        </div>
+
+        <div id="apply-fallback" hidden>
+          <div class="apply-ico apply-ico-mark" aria-hidden="true">!</div>
+          <h2>哎呀，送出失敗了</h2>
+          <p class="apply-sub">
+            網路好像有點問題，麻煩直接把你的 Gmail 信箱寄到<br />
+            <a class="mail-link" href="mailto:a.pieceofcake.zip@gmail.com">a.pieceofcake.zip@gmail.com</a><br />
+            我們一樣會盡快與你聯絡！
+          </p>
+          <a
+            class="btn btn-primary apply-submit"
+            href="mailto:a.pieceofcake.zip@gmail.com?subject=%E3%80%90%E8%AE%80%E5%88%B0%E9%80%99%E8%A3%8F%E3%80%91Android%20APP%20%E7%94%B3%E8%AB%8B&body=%E6%88%91%E7%9A%84%20Gmail%20%E4%BF%A1%E7%AE%B1%EF%BC%9A"
+          >
+            寄出 Gmail 信箱
+          </a>
+          <a class="btn btn-ghost apply-submit" href="https://readhere.pages.dev/">
+            網頁版註冊使用
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer-full">
+      <div class="footer-in">
+        <a class="brand" href="/">
+          <img src="/icon.png" width="28" height="28" alt="" />
+          <span>讀到這裡</span>
+        </a>
+        <nav class="footer-nav" aria-label="頁尾導覽">
+          <a href="/#features">功能</a>
+          <a href="/privacy/">隱私權</a>
+          <a href="/apply/">申請使用</a>
+        </nav>
+        <p class="footer-note">© <span id="year">2026</span> 讀到這裡 · 筆記只存在你的裝置裡</p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var year = document.getElementById("year");
+        if (year) year.textContent = String(new Date().getFullYear());
+
+        var FORM_ENDPOINT = "https://formsubmit.co/ajax/a.pieceofcake.zip@gmail.com";
+        var form = document.getElementById("android-form");
+        var formErr = document.getElementById("form-err");
+        var submitBtn = document.getElementById("android-submit");
+        var formView = document.getElementById("apply-form-view");
+        var doneView = document.getElementById("apply-done");
+        var fallbackView = document.getElementById("apply-fallback");
+
+        form.addEventListener("submit", async function (event) {
+          event.preventDefault();
+          var name = document.getElementById("f-name").value.trim();
+          var email = document.getElementById("f-email").value.trim();
+          formErr.classList.remove("show");
+          formErr.textContent = "";
+          if (!name) {
+            formErr.textContent = "請填寫姓名";
+            formErr.classList.add("show");
+            return;
+          }
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            formErr.textContent = "請填寫正確的 Gmail 信箱";
+            formErr.classList.add("show");
+            return;
+          }
+
+          submitBtn.disabled = true;
+          var oldLabel = submitBtn.textContent;
+          submitBtn.textContent = "送出中…";
+          try {
+            var res = await fetch(FORM_ENDPOINT, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: JSON.stringify({
+                姓名: name,
+                "Gmail 信箱": email,
+                _subject: "【讀到這裡】Android APP 申請",
+                _template: "table",
+              }),
+            });
+            var data = {};
+            try {
+              data = await res.json();
+            } catch (parseErr) {}
+            if (res.ok && (data.success === true || data.success === "true")) {
+              formView.hidden = true;
+              fallbackView.hidden = true;
+              doneView.hidden = false;
+            } else {
+              throw new Error("submit failed");
+            }
+          } catch (error) {
+            formView.hidden = true;
+            doneView.hidden = true;
+            fallbackView.hidden = false;
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = oldLabel;
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -287,6 +287,125 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .notfound h1 { font-size: 34px; margin: 20px 0 0; }
 .notfound p { color: var(--soft); }
 
+/* ---------- apply ---------- */
+.apply-main {
+  width: min(480px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 56px 0 72px;
+}
+.apply-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 36px 28px 30px;
+  text-align: center;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+}
+.apply-ico {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.apply-ico img {
+  border-radius: 14px;
+  display: block;
+}
+.apply-ico-mark {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(224, 169, 109, 0.16);
+  color: var(--gold-bright);
+  font-size: 28px;
+  font-weight: 700;
+}
+.apply-card h1,
+.apply-card h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+}
+.apply-sub {
+  margin: 14px 0 0;
+  color: var(--soft);
+  font-size: 15.5px;
+  line-height: 1.7;
+}
+.apply-form {
+  margin-top: 28px;
+  text-align: left;
+}
+.apply-field {
+  display: block;
+  margin-top: 16px;
+}
+.apply-field span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--soft);
+  font-size: 14px;
+  font-weight: 600;
+}
+.apply-field input {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid rgba(224, 169, 109, 0.35);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: rgba(22, 25, 30, 0.72);
+  color: var(--ink);
+  font-size: 16px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.apply-field input::placeholder {
+  color: rgba(154, 163, 178, 0.8);
+}
+.apply-field input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(224, 169, 109, 0.18);
+}
+.apply-err {
+  margin: 12px 0 0;
+  min-height: 0;
+  color: #e08a7a;
+  font-size: 14px;
+  display: none;
+}
+.apply-err.show {
+  display: block;
+}
+.apply-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 14px;
+  border-radius: 16px;
+  text-align: center;
+}
+button.apply-submit {
+  cursor: pointer;
+  font: inherit;
+}
+button.apply-submit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+.apply-note {
+  margin: 16px 0 0;
+  text-align: center;
+  color: var(--soft);
+  font-size: 13px;
+}
+
 /* ---------- reveal ---------- */
 .reveal { opacity: 1; }
 .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }

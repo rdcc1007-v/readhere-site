@@ -36,3 +36,13 @@ npx wrangler@4 deploy
 ```
 
 Static site lives in `public/`. Apply form posts to Worker `/api/apply` (D1 `readhere-apply`).
+
+## Email (Resend)
+
+申請通知寄到 `a.pieceofcake.zip@gmail.com`。
+
+```bash
+npx wrangler@4 secret put RESEND_API_KEY --name read
+```
+
+可選：`RESEND_FROM`（預設用 `onboarding@resend.dev`）。

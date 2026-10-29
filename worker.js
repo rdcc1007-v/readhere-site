@@ -6,11 +6,21 @@ const CORS = {
   "Access-Control-Allow-Headers": "Content-Type, Accept",
 };
 
+const NOTIFY_TO = "a.pieceofcake.zip@gmail.com";
+
 function json(status, body) {
   return new Response(JSON.stringify(body), {
     status,
     headers: { "Content-Type": "application/json; charset=utf-8", ...CORS },
   });
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
 
 async function ensureSchema(db) {
@@ -25,6 +35,30 @@ async function ensureSchema(db) {
       )`
     )
     .run();
+}
+
+async function sendResend(env, { subject, name, email }) {
+  if (!env.RESEND_API_KEY) return;
+  const from = env.RESEND_FROM || "讀到這裡 <onboarding@resend.dev>";
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from,
+      to: [NOTIFY_TO],
+      reply_to: email,
+      subject,
+      html: `<p><strong>姓名</strong>：${escapeHtml(name)}</p><p><strong>Gmail</strong>：${escapeHtml(email)}</p>`,
+      text: `姓名：${name}\nGmail：${email}`,
+    }),
+  });
+  if (!res.ok) {
+    const detail = await res.text().catch(() => "");
+    console.error("Resend failed", res.status, detail);
+  }
 }
 
 async function handleApply(request, env) {
@@ -61,20 +95,15 @@ async function handleApply(request, env) {
     .bind(id, name, email, createdAt, request.headers.get("User-Agent") || "")
     .run();
 
-  // 若 formsubmit 恢復，順便寄一封到信箱；失敗不影響申請成功。
+  // Resend 通知；失敗不影響申請成功（資料已在 D1）。
   try {
-    await fetch("https://formsubmit.co/ajax/a.pieceofcake.zip@gmail.com", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify({
-        姓名: name,
-        "Gmail 信箱": email,
-        _subject: "【讀到這裡】Android APP 申請",
-        _template: "table",
-      }),
+    await sendResend(env, {
+      subject: "【讀到這裡】Android APP 申請",
+      name,
+      email,
     });
-  } catch {
-    /* formsubmit 掛掉時略過 */
+  } catch (err) {
+    console.error("Resend error", err);
   }
 
   return json(200, { success: true });

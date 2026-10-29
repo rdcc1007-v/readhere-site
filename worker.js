@@ -6,7 +6,7 @@ const CORS = {
   "Access-Control-Allow-Headers": "Content-Type, Accept",
 };
 
-const NOTIFY_TO = "a.pieceofcake.zip@gmail.com";
+const NOTIFY_TO = "rdcc1007@gmail.com";
 
 function json(status, body) {
   return new Response(JSON.stringify(body), {

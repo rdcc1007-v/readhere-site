@@ -28,3 +28,11 @@
 
 - v2（2026-10-21）：首頁由單屏擴充為完整產品頁；隱私頁內文未更動，僅套用新版面並新增「聯絡」一節。
 - v1（2026-10-21）：初版上線（單屏首頁＋隱私頁）。
+
+## Deploy
+
+```bash
+npx wrangler@4 deploy
+```
+
+Static site lives in `public/`. Apply form posts to Worker `/api/apply` (D1 `readhere-apply`).

@@ -68,7 +68,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .brand {
   display: inline-flex; align-items: center; gap: 10px;
-  color: var(--ink); text-decoration: none; font-size: 19px; font-weight: 600;
+  color: var(--ink); text-decoration: none; font-size: 19px; font-weight: 400;
   letter-spacing: 0.05em; white-space: nowrap;
 }
 .brand img { border-radius: 9px; display: block; }

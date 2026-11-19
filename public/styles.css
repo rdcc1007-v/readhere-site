@@ -88,7 +88,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   align-items: center;
 }
 .eyebrow, .section-eyebrow {
-  margin: 0; color: var(--gold); font-size: 14px;
+  margin: 0; color: var(--gold); font-size: 15px;
   letter-spacing: 0.22em; font-weight: 600;
 }
 .hero h1 {
@@ -261,7 +261,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .footer-nav { display: flex; gap: 22px; flex-wrap: wrap; margin-left: auto; }
 .footer-nav a { color: var(--soft); text-decoration: none; font-size: 15px; }
 .footer-nav a:hover { color: var(--ink); }
-.footer-note { width: 100%; margin: 10px 0 0; color: var(--soft); font-size: 14px; }
+.footer-note { width: 100%; margin: 10px 0 0; color: var(--soft); font-size: 15px; }
 
 /* legacy single-column footer (kept for compatibility) */
 .site-footer {
@@ -349,7 +349,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   display: block;
   margin-bottom: 8px;
   color: var(--soft);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
 }
 .apply-field input,
@@ -383,7 +383,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   margin: 12px 0 0;
   min-height: 0;
   color: #e08a7a;
-  font-size: 14px;
+  font-size: 15px;
   display: none;
 }
 .apply-err.show {
@@ -410,7 +410,7 @@ button.apply-submit:disabled {
   margin: 16px 0 0;
   text-align: center;
   color: var(--soft);
-  font-size: 13px;
+  font-size: 15px;
 }
 
 /* ---------- reveal ---------- */

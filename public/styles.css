@@ -272,7 +272,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .site-footer a:hover { color: var(--ink); }
 
 /* ---------- privacy policy page ---------- */
-.policy { width: min(680px, calc(100% - 40px)); margin: 0 auto; padding: 60px 0 72px; }
+.policy { width: min(1080px, calc(100% - 48px)); margin: 0 auto; padding: 60px 0 72px; }
 .back { min-height: 44px; color: var(--ink); text-decoration: none; font-size: 16px; display: inline-block; }
 .back:hover { color: var(--gold); }
 .policy h1 { margin: 12px 0 0; font-size: 32px; font-weight: 600; letter-spacing: 0.04em; line-height: 1.25; }
@@ -426,7 +426,7 @@ button.apply-submit:disabled {
   .hero h1 { font-size: 50px; }
 }
 @media (max-width: 640px) {
-  .header-in, .hero, .section, .footer-in { width: calc(100% - 40px); }
+  .header-in, .hero, .section, .footer-in, .policy { width: calc(100% - 40px); }
   .site-nav { gap: 16px; }
   .site-nav a { font-size: 14.5px; }
   .hero h1 { font-size: 42px; }

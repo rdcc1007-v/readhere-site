@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>許願池 — 讀到這裡</title>
+    <meta
+      name="description"
+      content="有什麼功能想許願，或想看的書？寫下來告訴我們。"
+    />
+    <link rel="canonical" href="https://read.dreamdiary.workers.dev/wishlist/" />
+    <meta name="theme-color" content="#16191e" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="讀到這裡" />
+    <meta property="og:title" content="許願池 — 讀到這裡" />
+    <meta
+      property="og:description"
+      content="許下你對讀到這裡的願望。"
+    />
+    <meta property="og:url" content="https://read.dreamdiary.workers.dev/wishlist/" />
+    <meta property="og:image" content="https://read.dreamdiary.workers.dev/icon.png" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/icon.png" />
+    <link rel="apple-touch-icon" href="/icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="apply-page">
+    <a class="skip" href="#main">跳到主要內容</a>
+
+    <header class="site-header">
+      <div class="header-in">
+        <a class="brand" href="/" aria-label="讀到這裡 — 首頁">
+          <img src="/icon.png" width="34" height="34" alt="" />
+          <span>讀到這裡</span>
+        </a>
+        <nav class="site-nav" aria-label="網站導覽">
+          <a href="/#features">功能</a>
+          <a href="/#rooms">書房</a>
+          <a href="/wishlist/" aria-current="page">許願池</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="apply-main">
+      <section class="apply-card" aria-labelledby="apply-title">
+        <div id="apply-form-view">
+          <div class="apply-ico" aria-hidden="true">
+            <img src="/icon.png" width="56" height="56" alt="" />
+          </div>
+          <h1 id="apply-title">許願池</h1>
+          <p class="apply-sub">
+            有什麼功能想許願，或想看的書？<br />
+            寫下來告訴我們，我們都會看。
+          </p>
+
+          <form id="wish-form" class="apply-form" novalidate>
+            <label class="apply-field">
+              <span>姓名</span>
+              <input
+                type="text"
+                id="f-name"
+                name="name"
+                placeholder="怎麼稱呼你"
+                autocomplete="name"
+              />
+            </label>
+            <label class="apply-field">
+              <span>許願內容</span>
+              <textarea
+                id="f-wish"
+                name="wish"
+                rows="4"
+                placeholder="想許願的功能，或想看的書"
+              ></textarea>
+            </label>
+            <label class="apply-field">
+              <span>Gmail 信箱（選填，想收到回覆再留）</span>
+              <input
+                type="email"
+                id="f-email"
+                name="email"
+                placeholder="你的 Gmail 信箱"
+                autocomplete="email"
+              />
+            </label>
+            <p class="apply-err" id="form-err" role="alert"></p>
+            <button type="submit" class="btn btn-primary apply-submit" id="wish-submit">
+              許下願望
+            </button>
+            <a class="btn btn-ghost apply-submit" href="https://readhere.pages.dev/">
+              網頁版註冊使用
+            </a>
+            <p class="apply-note">許願不會公開，只會寄給我們。</p>
+          </form>
+        </div>
+
+        <div id="apply-done" hidden>
+          <div class="apply-ico apply-ico-mark" aria-hidden="true">✓</div>
+          <h2>謝謝你的許願！</h2>
+          <p class="apply-sub">
+            你的許願我們收到了，謝謝你告訴我們。
+          </p>
+          <a class="btn btn-primary apply-submit" href="https://readhere.pages.dev/">
+            網頁版註冊使用
+          </a>
+          <a class="btn btn-ghost apply-submit" href="/">回首頁</a>
+        </div>
+
+        <div id="apply-fallback" hidden>
+          <div class="apply-ico apply-ico-mark" aria-hidden="true">!</div>
+          <h2>哎呀，送出失敗了</h2>
+          <p class="apply-sub">
+            網路好像有點問題，麻煩直接把你的許願寄到<br />
+            <a class="mail-link" href="mailto:a.pieceofcake.zip@gmail.com">a.pieceofcake.zip@gmail.com</a><br />
+            我們一樣會收到！
+          </p>
+          <a
+            class="btn btn-primary apply-submit"
+            href="mailto:a.pieceofcake.zip@gmail.com?subject=%E3%80%90%E8%AE%80%E5%88%B0%E9%80%99%E8%A3%8F%E3%80%91%E8%A8%B1%E9%A1%98%E6%B1%A0&body=%E6%88%91%E7%9A%84%E8%A8%B1%E9%A1%98%EF%BC%9A"
+          >
+            寄出 Gmail 信箱
+          </a>
+          <a class="btn btn-ghost apply-submit" href="https://readhere.pages.dev/">
+            網頁版註冊使用
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer-full">
+      <div class="footer-in">
+        <a class="brand" href="/">
+          <img src="/icon.png" width="28" height="28" alt="" />
+          <span>讀到這裡</span>
+        </a>
+        <nav class="footer-nav" aria-label="頁尾導覽">
+          <a href="/privacy/">隱私權</a>
+          <a href="/privacy/#contact">聯絡我們</a>
+        </nav>
+        <p class="footer-note">© <span id="year">2026</span> 讀到這裡 · 筆記只存在你的裝置裡</p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var year = document.getElementById("year");
+        if (year) year.textContent = String(new Date().getFullYear());
+
+        var FORM_ENDPOINT = "/api/wish";
+        var form = document.getElementById("wish-form");
+        var formErr = document.getElementById("form-err");
+        var submitBtn = document.getElementById("wish-submit");
+        var formView = document.getElementById("apply-form-view");
+        var doneView = document.getElementById("apply-done");
+        var fallbackView = document.getElementById("apply-fallback");
+
+        form.addEventListener("submit", async function (event) {
+          event.preventDefault();
+          var name = document.getElementById("f-name").value.trim();
+          var wish = document.getElementById("f-wish").value.trim();
+          var email = document.getElementById("f-email").value.trim();
+          formErr.classList.remove("show");
+          formErr.textContent = "";
+          if (!name) {
+            formErr.textContent = "請填寫姓名";
+            formErr.classList.add("show");
+            return;
+          }
+          if (!wish) {
+            formErr.textContent = "請寫下你的許願";
+            formErr.classList.add("show");
+            return;
+          }
+          if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            formErr.textContent = "請填寫正確的 Gmail 信箱";
+            formErr.classList.add("show");
+            return;
+          }
+
+          submitBtn.disabled = true;
+          var oldLabel = submitBtn.textContent;
+          submitBtn.textContent = "送出中…";
+          try {
+            var res = await fetch(FORM_ENDPOINT, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: JSON.stringify({
+                姓名: name,
+                許願內容: wish,
+                "Gmail 信箱": email,
+              }),
+            });
+            var data = {};
+            try {
+              data = await res.json();
+            } catch (parseErr) {}
+            if (res.ok && (data.success === true || data.success === "true")) {
+              formView.hidden = true;
+              fallbackView.hidden = true;
+              doneView.hidden = false;
+            } else if (data && data.error) {
+              formErr.textContent = data.error;
+              formErr.classList.add("show");
+            } else {
+              throw new Error("submit failed");
+            }
+          } catch (error) {
+            formView.hidden = true;
+            doneView.hidden = true;
+            fallbackView.hidden = false;
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = oldLabel;
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

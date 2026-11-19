@@ -283,13 +283,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .policy li + li { margin-top: 4px; }
 
 /* ---------- 404 ---------- */
-.notfound { width: min(640px, calc(100% - 40px)); margin: 0 auto; padding: 96px 0; text-align: center; }
+.notfound { width: min(1080px, calc(100% - 48px)); margin: 0 auto; padding: 96px 0; text-align: center; }
 .notfound h1 { font-size: 34px; margin: 20px 0 0; }
 .notfound p { color: var(--soft); }
 
 /* ---------- apply ---------- */
 .apply-main {
-  width: min(480px, calc(100% - 40px));
+  width: min(1080px, calc(100% - 48px));
   margin: 0 auto;
   padding: 56px 0 72px;
 }
@@ -338,7 +338,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   line-height: 1.7;
 }
 .apply-form {
-  margin-top: 28px;
+  margin: 28px auto 0;
+  max-width: 560px;
   text-align: left;
 }
 .apply-field {
@@ -426,7 +427,7 @@ button.apply-submit:disabled {
   .hero h1 { font-size: 50px; }
 }
 @media (max-width: 640px) {
-  .header-in, .hero, .section, .footer-in, .policy { width: calc(100% - 40px); }
+  .header-in, .hero, .section, .footer-in, .policy, .apply-main, .notfound { width: calc(100% - 40px); }
   .site-nav { gap: 16px; }
   .site-nav a { font-size: 14.5px; }
   .hero h1 { font-size: 42px; }

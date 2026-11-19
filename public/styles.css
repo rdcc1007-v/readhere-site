@@ -259,7 +259,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
 }
 .footer-nav { display: flex; gap: 22px; flex-wrap: wrap; margin-left: auto; }
-.footer-nav a { color: var(--soft); text-decoration: none; font-size: 15px; }
+.footer-nav a { color: var(--soft); text-decoration: none; font-size: 15.5px; }
 .footer-nav a:hover { color: var(--ink); }
 .footer-note { width: 100%; margin: 10px 0 0; color: var(--soft); font-size: 14px; }
 

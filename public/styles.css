@@ -352,7 +352,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   font-size: 14px;
   font-weight: 600;
 }
-.apply-field input {
+.apply-field input,
+.apply-field textarea {
   width: 100%;
   min-height: 48px;
   border: 1px solid rgba(224, 169, 109, 0.35);
@@ -361,14 +362,20 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   background: rgba(22, 25, 30, 0.72);
   color: var(--ink);
   font-size: 16px;
+  font-family: inherit;
   outline: none;
   -webkit-appearance: none;
   appearance: none;
 }
-.apply-field input::placeholder {
+.apply-field textarea {
+  resize: vertical;
+}
+.apply-field input::placeholder,
+.apply-field textarea::placeholder {
   color: rgba(154, 163, 178, 0.8);
 }
-.apply-field input:focus {
+.apply-field input:focus,
+.apply-field textarea:focus {
   border-color: var(--gold);
   box-shadow: 0 0 0 3px rgba(224, 169, 109, 0.18);
 }
